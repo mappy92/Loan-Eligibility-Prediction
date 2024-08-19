@@ -7,24 +7,24 @@ We approach the problem using supervised learning and classification techniques.
 
 <h3>Implementation Steps</h3>
 <h4>1. Data Exploration</h4>
-<b>Shape and Info: </b>Used to understand the structure of the data, including the number of entries, features, and their data types.
-<b>Describe: </b>Provides statistical summary of numerical features to get insights like mean, median, standard deviation, etc.
-<b>Box Plot: </b>Visualizes numerical data to identify outliers that may affect model performance.
-<b>Histograms: </b>Used to check the distribution of data across different features.
+<b>Shape and Info: </b>Used to understand the structure of the data, including the number of entries, features, and their data types.<br/>
+<b>Describe: </b>Provides statistical summary of numerical features to get insights like mean, median, standard deviation, etc.<br/>
+<b>Box Plot: </b>Visualizes numerical data to identify outliers that may affect model performance.<br/>
+<b>Histograms: </b>Used to check the distribution of data across different features.<br/>
 <h4>2. Handling Missing Values</h4>
-<b>Categorical Variables:</b> Missing values are filled using the mode (most frequent value).
-<b>Numerical Variables: </b>Missing values are imputed using the mean.
+<b>Categorical Variables:</b> Missing values are filled using the mode (most frequent value).<br/>
+<b>Numerical Variables: </b>Missing values are imputed using the mean.<br/>
 <h4>3. Data Transformation</h4>
-<b>Normalization: </b>Applied log transformation to numerical values to normalize data dispersion.
-<b>Feature Engineering: </b>Created a new variable Total_Income by summing Applicant_Income and Coapplicant_Income.
+<b>Normalization: </b>Applied log transformation to numerical values to normalize data dispersion.<br/>
+<b>Feature Engineering: </b>Created a new variable Total_Income by summing Applicant_Income and Coapplicant_Income.<br/>
 <h4>4. Encoding Categorical Variables</h4>
-Converted categorical variables (e.g., Education, Gender, Married) into numerical format using encoding techniques.
+Converted categorical variables (e.g., Education, Gender, Married) into numerical format using encoding techniques.<br/>
 
 <h4>5. Feature Scaling</h4>
-Scaled the numerical data to minimize the range differences between variables, improving model performance.
+Scaled the numerical data to minimize the range differences between variables, improving model performance.<br/>
 
 <h4>6. Model Training and Evaluation</h4>
-<b>Decision Tree: </b>Used with entropy criterion; achieved approximately 72% accuracy.
+<b>Decision Tree: </b>Used with entropy criterion; achieved approximately 72% accuracy.<br/>
 <b>Naive Bayes: </b>Applied and found an accuracy of around 82%.
 <h4>7. Prediction on New Data</h4>
 Repeated the data cleaning and transformation steps on loan-test.csv to predict loan eligibility for new applicants.
