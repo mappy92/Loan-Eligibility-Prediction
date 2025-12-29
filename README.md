@@ -63,17 +63,16 @@ The project uses **Python and machine learning** to classify loan applications a
 
 ### Folder Structure
 
-Loan-Eligibility-Prediction/
-├── data/
-│   ├── loan-train.csv
-│   └── loan-test.csv
-├── notebooks/
-│   └── loan_eligibility_model.ipynb
-├── reports/
-│   └── visualizations/
-├── requirements.txt
-└── README.md
-
+<pre>
+📁 Loan-Eligibility-Prediction/
+├── 📄 loan-train.csv
+├── 📄 loan-test.csv
+├── 📄 loan_eligibility_model.ipynb
+├── 📁 reports/
+│   └── 📁 visualizations/
+├── 📄 requirements.txt
+└── 📄 README.md
+</pre>
 
 
 ### Flow Diagram
