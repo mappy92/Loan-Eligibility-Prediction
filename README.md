@@ -1,36 +1,139 @@
-<h2>Loan Eligibility Prediction</h2>
-<h3>Problem Statement</h3>
-The objective is to predict the loan eligibility of applicants based on various factors such as education, marital status, gender, applicant and co-applicant income, loan amount, and other variables. This prediction helps in automating the decision-making process for approving loans.
+# Loan Eligibility Prediction
 
-<h3>Solution Overview</h3>
-We approach the problem using supervised learning and classification techniques. The process involves training a model using historical loan data (loan-train.csv) and testing its accuracy. Once the model is validated, it is used to predict loan eligibility for new applicants using fresh data (loan-test.csv).
+[![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/)
+[![Scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
 
-<h3>Implementation Steps</h3>
-<h4>1. Data Exploration</h4>
-<b>Shape and Info: </b>Used to understand the structure of the data, including the number of entries, features, and their data types.<br/>
-<b>Describe: </b>Provides statistical summary of numerical features to get insights like mean, median, standard deviation, etc.<br/>
-<b>Box Plot: </b>Visualizes numerical data to identify outliers that may affect model performance.<br/>
-<b>Histograms: </b>Used to check the distribution of data across different features.<br/>
-<h4>2. Handling Missing Values</h4>
-<b>Categorical Variables:</b> Missing values are filled using the mode (most frequent value).<br/>
-<b>Numerical Variables: </b>Missing values are imputed using the mean.<br/>
-<h4>3. Data Transformation</h4>
-<b>Normalization: </b>Applied log transformation to numerical values to normalize data dispersion.<br/>
-<b>Feature Engineering: </b>Created a new variable Total_Income by summing Applicant_Income and Coapplicant_Income.<br/>
-<h4>4. Encoding Categorical Variables</h4>
-Converted categorical variables (e.g., Education, Gender, Married) into numerical format using encoding techniques.<br/>
+---
 
-<h4>5. Feature Scaling</h4>
-Scaled the numerical data to minimize the range differences between variables, improving model performance.<br/>
+## Project Scope
+Predict whether applicants are eligible for a loan using historical financial data. This project automates and improves the decision-making process for banks and financial institutions.
 
-<h4>6. Model Training and Evaluation</h4>
-<b>Decision Tree: </b>Used with entropy criterion; achieved approximately 72% accuracy.<br/>
-<b>Naive Bayes: </b>Applied and found an accuracy of around 82%.
-<h4>7. Prediction on New Data</h4>
-Repeated the data cleaning and transformation steps on loan-test.csv to predict loan eligibility for new applicants.
+## Audience-Friendly Description
+This tool helps lenders approve loans faster and more accurately while reducing manual work and minimizing human errors.
 
-<h3>Results</h3>
-The Naive Bayes model outperformed the Decision Tree model, achieving an accuracy of 82%. This model was then used to predict the eligibility of applicants in the test dataset.
+## Business Impact
+- Speeds up loan approval process  
+- Improves operational efficiency  
+- Reduces manual errors and ensures consistent decision-making  
 
-<h3>Conclusion</h3>
-This project demonstrates how machine learning can be used to predict loan eligibility, helping financial institutions make data-driven decisions. Further improvements can be made by exploring more sophisticated models or fine-tuning hyperparameters.
+---
+
+## Project Description
+The project uses **Python and machine learning** to classify loan applications as eligible or not. Key steps include data cleaning, feature engineering, model training, and evaluation.
+
+### Why This Technology
+- **Python:** Core programming for data processing and ML  
+- **Pandas & NumPy:** Efficient data handling  
+- **Scikit-learn:** Training classification models  
+- **Matplotlib & Seaborn:** Visualization  
+
+### Model Details
+- **Decision Tree:** Accuracy ~72%  
+- **Naive Bayes:** Accuracy ~82% (Final Model)  
+
+### Metrics
+- **Accuracy:** Correctly classified applications as eligible or not  
+- Naive Bayes chosen for superior performance  
+
+### Features
+- **Applicant & Co-applicant Income:** Combined as `Total_Income`  
+- **Education, Gender, Married:** Encoded numerically  
+- **Loan Amount & Term:** Scaled for consistent input  
+
+### Output / Inference
+- Predicts loan eligibility (Yes/No) for new applicants  
+- Provides actionable insights for banking decisions  
+
+---
+
+## Table of Contents
+1. [Folder Structure](#folder-structure)  
+2. [Flow Diagram](#flow-diagram)  
+3. [Dashboards & Visualizations](#dashboards--visualizations)  
+4. [Output](#output)  
+5. [How to Run](#how-to-run)  
+6. [Dependencies](#dependencies)  
+7. [Contribution Guidelines](#contribution-guidelines)  
+8. [License & Credits](#license--credits)  
+9. [Next Steps](#next-steps)  
+
+---
+
+### Folder Structure
+
+<pre>
+📁 Loan-Eligibility-Prediction/
+├── 📄 loan-train.csv
+├── 📄 loan-test.csv
+├── 📄 loan_eligibility_model.ipynb
+├── 📁 reports/
+│   └── 📁 visualizations/
+├── 📄 requirements.txt
+└── 📄 README.md
+</pre>
+
+
+### Flow Diagram
+![Flow Diagram](./flow_diagram.png)  
+
+---
+
+### Dashboards & Visualizations
+- **Histograms:** Data distribution for numerical features  
+- **Boxplots:** Identify outliers  
+- **Feature Importance:** Shows top predictors for loan eligibility
+  
+- Histogram example :
+
+![Flow Diagram](./reports/histogram-applicant-income.png)
+
+- Box-plot ecample : 
+
+![Flow Diagram](./reports/Box-plot-applicant-income.png)
+
+
+---
+
+### Output
+- Predictions for new applicants (Yes/No)  
+- Accuracy metrics and model performance comparison  
+
+---
+
+## How to Run
+1. Clone the repository:  
+```bash
+  git clone https://github.com/mappy92/Loan-Eligibility-Prediction.git
+```
+2. Navigate to the project folder
+```bash
+  cd Loan-Eligibility-Prediction
+```
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+### Dependencies
+1. Python >=3.8
+2. pandas
+3. numpy
+4. scikit-learn
+5. matplotlib
+6. seaborn
+(Use pip freeze > requirements.txt to capture dependencies.)
+
+### Contribution Guidelines
+1. Fork the repository
+2. Create a branch for new feature/fix
+3. Submit a pull request with description
+
+### License & Credits
+1. License: MIT License
+2. Credits: Python, Scikit-learn, Pandas, NumPy, Seaborn libraries
+
+## Next Steps
+ 1. Explore advanced models like Random Forest or XGBoost
+ 2. Hyperparameter tuning for improved accuracy
+ 3. Deploy as a web application for real-time loan eligibility prediction
